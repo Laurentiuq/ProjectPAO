@@ -7,25 +7,25 @@ enum Size {
     Large,
 }
 
-public class Cow extends Animal {
+public final class Cow extends Animal {
     Size size;
-    private int age;
     private final String subspecies;
     private final String letterIdentifier;
     private final int uniqueNumberIdentifier;
     private final String earTag;
 
     public Cow() {
-        age = 0;
-        size = Size.Small;
-        subspecies = "";
-        uniqueNumberIdentifier = 0;
-        letterIdentifier = "A";
-        earTag = "";
+        this.age = 0;
+        this.size = Size.Small;
+        this.subspecies = "";
+        this.uniqueNumberIdentifier = 0;
+        this.letterIdentifier = "A";
+        this.earTag = "";
     }
 
-    public Cow(Size size, String subspecies, String letterIdentifier, int uniqueNumberIdentifier, int age) {
-        this.age = age;
+    // we compute the earTag in the constructor because it is a combination of the letterIdentifier and the uniqueNumberIdentifier
+    public Cow(String name, String species, double weight, int age, String healthStatus, Size size, String subspecies, String letterIdentifier, int uniqueNumberIdentifier) {
+        super(name, species, weight, age, healthStatus);
         this.size = size;
         this.subspecies = subspecies;
         this.letterIdentifier = letterIdentifier;
@@ -38,36 +38,43 @@ public class Cow extends Animal {
         this.earTag = letterIdentifier + Integer.toString(uniqueNumberIdentifier);
     }
 
-    public String getSubspecies(){
-        return subspecies;
-    }
-    public int getUniqueNumberIdentifier(){
-        return uniqueNumberIdentifier;
-    }
-    public String getLetterIdentifier(){
-        return letterIdentifier;
-    }
-    public String getEarTag(){
-        return earTag;
-    }
-    public int getAge(){
-        return age;
+
+    public Size getSize() {
+        return size;
     }
 
-    public void setSize(Size size){
+    public void setSize(Size size) {
         this.size = size;
     }
 
-    public void setAge(int age){
-        this.age = age;
+    public String getSubspecies() {
+        return subspecies;
+    }
+
+    public String getLetterIdentifier() {
+        return letterIdentifier;
+    }
+
+    public int getUniqueNumberIdentifier() {
+        return uniqueNumberIdentifier;
+    }
+
+    public String getEarTag() {
+        return earTag;
     }
 
     @Override
     public String toString() {
         return "Cow{" +
-                "size=" + size +
+                "name='" + name + '\'' +
+                ", species='" + species + '\'' +
+                ", weight=" + weight +
                 ", age=" + age +
+                ", healthStatus='" + healthStatus + '\'' +
+                ", size=" + size +
                 ", subspecies='" + subspecies + '\'' +
+                ", letterIdentifier='" + letterIdentifier + '\'' +
+                ", uniqueNumberIdentifier=" + uniqueNumberIdentifier +
                 ", earTag='" + earTag + '\'' +
                 '}';
     }
