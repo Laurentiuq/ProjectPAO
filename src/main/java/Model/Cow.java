@@ -1,4 +1,4 @@
-package org.example;
+package Model;
 
 
 enum Size {
@@ -9,10 +9,10 @@ enum Size {
 
 public final class Cow extends Animal {
     Size size;
-    private final String subspecies;
-    private final String letterIdentifier;
-    private final int uniqueNumberIdentifier;
-    private final String earTag;
+    private String subspecies;
+    private String letterIdentifier;
+    private int uniqueNumberIdentifier;
+    private  String earTag;
 
     public Cow() {
         this.age = 0;

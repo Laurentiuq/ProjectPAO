@@ -1,4 +1,4 @@
-package org.example;
+package Model;
 
 abstract class Animal {
     // popular name for the animal
