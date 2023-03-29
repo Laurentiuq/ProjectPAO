@@ -1,12 +1,6 @@
 package Model;
 
 
-enum Size {
-    Small,
-    Medium,
-    Large,
-}
-
 public final class Cow extends Animal {
     Size size;
     private String subspecies;

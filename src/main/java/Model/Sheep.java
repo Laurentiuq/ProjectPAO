@@ -41,6 +41,46 @@ public class Sheep extends Animal{
         this.lastShearing = lastShearing;
     }
 
+    public String getWoolBreed() {
+        return woolBreed;
+    }
+
+    public void setWoolBreed(String woolBreed) {
+        this.woolBreed = woolBreed;
+    }
+
+    public String getLetterIdentifier() {
+        return letterIdentifier;
+    }
+
+    public void setLetterIdentifier(String letterIdentifier) {
+        this.letterIdentifier = letterIdentifier;
+    }
+
+    public int getUniqueNumberIdentifier() {
+        return uniqueNumberIdentifier;
+    }
+
+    public void setUniqueNumberIdentifier(int uniqueNumberIdentifier) {
+        this.uniqueNumberIdentifier = uniqueNumberIdentifier;
+    }
+
+    public String getEarTag() {
+        return earTag;
+    }
+
+    public void setEarTag(String earTag) {
+        this.earTag = earTag;
+    }
+
+    public Date getLastShearing() {
+        return lastShearing;
+    }
+
+    public void setLastShearing(Date lastShearing) {
+        this.lastShearing = lastShearing;
+    }
+
     @Override
     public String toString() {
         return "Sheep{" +

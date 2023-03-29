@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="686d5811-ed58-4ab6-99a0-7b341ade37b1" name="Changes" comment="animal new attr">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Beehive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Chicken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Sheep.java" afterDir="false" />
+    <list default="true" id="686d5811-ed58-4ab6-99a0-7b341ade37b1" name="Changes" comment="added other classes">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Builidng.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/CropField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Farm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/GrazingField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Size.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Stable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/AnimalInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/CowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/CropFieldInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/FarmInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/FarmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sheep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -48,6 +62,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +72,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Model.Main" />
+      <module name="Farm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +105,8 @@
       <workItem from="1679914510312" duration="747000" />
       <workItem from="1679923671178" duration="819000" />
       <workItem from="1680007273752" duration="2604000" />
-      <workItem from="1680017865703" duration="6071000" />
+      <workItem from="1680017865703" duration="6101000" />
+      <workItem from="1680089299190" duration="10722000" />
     </task>
     <task id="LOCAL-00001" summary="-first commit">
       <created>1679610883333</created>
@@ -93,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680018629074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added other classes">
+      <created>1680030914408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680030914408</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +146,7 @@
     <MESSAGE value="-first commit" />
     <MESSAGE value="added animal and cow classes" />
     <MESSAGE value="animal new attr" />
-    <option name="LAST_COMMIT_MESSAGE" value="animal new attr" />
+    <MESSAGE value="added other classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added other classes" />
   </component>
 </project>

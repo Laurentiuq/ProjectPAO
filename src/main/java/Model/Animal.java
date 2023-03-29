@@ -1,6 +1,6 @@
 package Model;
 
-abstract class Animal {
+public abstract class Animal {
     // popular name for the animal
     protected String name;
     // scientific term of the animal
