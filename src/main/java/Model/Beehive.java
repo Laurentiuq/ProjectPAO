@@ -1,4 +1,5 @@
 package Model;
+
 import java.text.DateFormat;
 // df.parse() can throw a ParseException so we need to import this to parse the exception
 import java.text.ParseException;
@@ -8,19 +9,24 @@ import java.util.Date;
 import java.time.Instant;
 
 public class Beehive {
+
+    private String identifier;
     private int nrSupers;
     private boolean queenExcluder;
     private Date lastExtractionDate;
     private double lastExtractionQuantity;
 
     public Beehive() {
+        this.identifier = "";
         this.nrSupers = 0;
         this.queenExcluder = false;
         this.lastExtractionDate = Date.from(java.time.Instant.now());
         this.lastExtractionQuantity = -1;
     }
 
-    public Beehive(int nrSupers, boolean queenExcluder, String lastExtractionDate, double lastExtractionQuantity) throws ParseException {
+
+    public Beehive(String identifier, int nrSupers, boolean queenExcluder, String lastExtractionDate, double lastExtractionQuantity) throws ParseException {
+        this.identifier = identifier;
         this.nrSupers = nrSupers;
         this.queenExcluder = queenExcluder;
         // We need this to convert the string to a date
@@ -29,9 +35,18 @@ public class Beehive {
         this.lastExtractionQuantity = lastExtractionQuantity;
     }
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+
     public int getNrSupers() {
         return nrSupers;
     }
+
     public void setNrSupers(int nrSupers) {
         this.nrSupers = nrSupers;
     }
@@ -39,6 +54,7 @@ public class Beehive {
     public boolean isQueenExcluder() {
         return queenExcluder;
     }
+
     public void setQueenExcluder(boolean queenExcluder) {
         this.queenExcluder = queenExcluder;
     }
@@ -46,6 +62,7 @@ public class Beehive {
     public Date getLastExtractionDate() {
         return lastExtractionDate;
     }
+
     public void setLastExtractionDate(Date lastExtractionDate) {
         this.lastExtractionDate = lastExtractionDate;
     }
@@ -54,18 +71,18 @@ public class Beehive {
         return lastExtractionQuantity;
     }
 
-    public void setLastExtractionQuantity(double lastExtractionQuantity){
+    public void setLastExtractionQuantity(double lastExtractionQuantity) {
         this.lastExtractionQuantity = lastExtractionQuantity;
     }
 
     @Override
     public String toString() {
         return "Beehive{" +
-                "nrSupers=" + nrSupers +
+                "identifier='" + identifier + '\'' +
+                ", nrSupers=" + nrSupers +
                 ", queenExcluder=" + queenExcluder +
                 ", lastExtractionDate=" + lastExtractionDate +
                 ", lastExtractionQuantity=" + lastExtractionQuantity +
                 '}';
     }
-
 }

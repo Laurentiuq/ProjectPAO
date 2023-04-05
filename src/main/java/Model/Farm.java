@@ -1,30 +1,43 @@
 package Model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 
 public class Farm {
     private String name;
     private Vector<Field> fields;
     private Vector<Builidng> buildings;
-
     private List<Animal> animals;
+    private Map<String, Beehive> beehives;
 
     public Farm() {
-        this.name = "Farm";
-        this.fields = new Vector<Field>();
-        this.buildings = new Vector<Builidng>();
-        this.animals = new Vector<Animal>();
+        this.name = "";
+        this.fields = new Vector<>();
+        this.buildings = new Vector<>();
+        this.animals = new Vector<>();
+        this.beehives = new HashMap<String, Beehive>();
     }
-    public Farm(String name, Vector<Field> fields, Vector<Builidng> buildings, List<Animal> animals) {
+
+    public Farm(String name, Vector<Field> fields, Vector<Builidng> buildings, List<Animal> animals, Map<String, Beehive> beehives) {
         this.name = name;
         this.fields = fields;
         this.buildings = buildings;
         this.animals = animals;
+        this.beehives = beehives;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Map<String, Beehive> getBeehives() {
+        return beehives;
+    }
+
+    public void setBeehives(Map<String, Beehive> beehives) {
+        this.beehives = beehives;
     }
 
     public void setName(String name) {

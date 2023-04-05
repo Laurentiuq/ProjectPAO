@@ -19,6 +19,7 @@ public class CowService implements AnimalInterface{
         else if(cow.getSize() == Size.Large){
             foodMultiplier += 1.5;
         }
+        // it is a belgian blue cow then the food needed is increased by 1
         if (cow.getSubspecies().equalsIgnoreCase("belgian blue")){
             foodMultiplier += 1;
         }

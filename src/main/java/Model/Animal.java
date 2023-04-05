@@ -1,16 +1,17 @@
 package Model;
 
 public abstract class Animal {
-    // popular name for the animal
+    // well-known term for the animal
     protected String name;
     // scientific term of the animal
     protected String species;
-    // total number of animals alive
     protected double weight;
     protected int age;
     // general information about the animal's health, any recent diseases, etc.
     protected String healthStatus;
     static int totalNumber;
+
+    // total number of animals alive
 
     static{
         totalNumber = 0;
@@ -90,6 +91,7 @@ public abstract class Animal {
                 ", healthStatus='" + healthStatus + '\'' +
                 '}';
     }
+
     @Override
     protected void finalize(){
         totalNumber -= 1;
