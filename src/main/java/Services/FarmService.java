@@ -1,9 +1,13 @@
 package Services;
 
 import Model.*;
+import Persistence.Repos.ChickenRepository;
+import Persistence.Repos.CowRepository;
+import Persistence.Repos.SheepRepository;
 
 import java.awt.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -69,10 +73,22 @@ public class FarmService {
     }
 
     // output all the animals in the farm
-    public void printAnimals(){
+    public void printAnimals() throws SQLException {
         System.out.println("------Animals--------");
-        for(Animal animal : farm.getAnimals()){
-            System.out.println(animal);
+        CowRepository cowRepository = CowRepository.getInstance();
+        SheepRepository sheepRepository = SheepRepository.getInstance();
+        ChickenRepository chickenRepository = ChickenRepository.getInstance();
+        List<Cow> cows = cowRepository.findAll();
+        List<Sheep> sheeps = sheepRepository.findAll();
+        List<Chicken> chickens = chickenRepository.findAll();
+        for (Cow cow : cows) {
+            System.out.println(cow);
+        }
+        for (Sheep sheep : sheeps) {
+            System.out.println(sheep);
+        }
+        for (Chicken chicken : chickens) {
+            System.out.println(chicken);
         }
         System.out.println("------Animals--------");
         System.out.println();

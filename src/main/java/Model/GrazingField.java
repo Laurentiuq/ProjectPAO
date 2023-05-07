@@ -9,8 +9,8 @@ public class GrazingField extends Field{
     public GrazingField() {
     }
 
-    public GrazingField(String name, int size, int type, double fertility, Date lastGrazingDate) {
-        super(name, size, type);
+    public GrazingField(int id, String name, int size, int type, double fertility, Date lastGrazingDate) {
+        super(id, name, size, type);
         this.fertility = fertility;
         this.lastGrazingDate = lastGrazingDate;
     }

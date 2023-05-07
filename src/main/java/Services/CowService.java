@@ -4,6 +4,9 @@ import Model.Animal;
 import Model.Cow;
 import Model.Size;
 
+import java.sql.Connection;
+import java.util.Scanner;
+
 public class CowService implements AnimalInterface{
     public void computeFoodNeeded(Animal animal) {
         System.out.println("This is a cow service");
@@ -46,4 +49,33 @@ public class CowService implements AnimalInterface{
         value = cow.getWeight() * valueMultiplier;
         return value;
     }
+
+    public Cow readAnimal(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Name: ");
+        String name = scanner.nextLine();
+        System.out.println("Species: ");
+        String species = scanner.nextLine();
+        System.out.println("Weight: ");
+        double weight = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Health: ");
+        String health = scanner.nextLine();
+        System.out.println("Size: (Small, Medium, Large)");
+        String size = scanner.nextLine();
+        System.out.println("Subspecies: ");
+        String subspecies = scanner.nextLine();
+        System.out.println("Letter identifier: ");
+        String letterIdentifier = scanner.nextLine();
+        System.out.println("Unique number identifier: (>= 1000 <= 9999)");
+        int uniqueNumberIdentifier = scanner.nextInt();
+        scanner.nextLine();
+        Cow cow = new Cow(name, species, weight, age, health, Size.valueOf(size), subspecies, letterIdentifier, uniqueNumberIdentifier);
+        System.out.println(cow.toString());
+        return cow;
+    }
+
 }

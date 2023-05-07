@@ -2,6 +2,7 @@ package Model;
 
 
 abstract class Field {
+    int id;
     protected String name;
     protected int size;
     protected int type;
@@ -9,7 +10,8 @@ abstract class Field {
     public Field() {
     }
 
-    public Field(String name, int size, int type) {
+    public Field(int id, String name, int size, int type) {
+        this.id = id;
         this.name = name;
         this.size = size;
         this.type = type;

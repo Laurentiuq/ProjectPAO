@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Vector;
 
 public class Farm {
+    private int id;
     private String name;
     private Vector<Field> fields;
     private Vector<Builidng> buildings;
@@ -13,6 +14,7 @@ public class Farm {
     private Map<String, Beehive> beehives;
 
     public Farm() {
+        this.id = -1;
         this.name = "";
         this.fields = new Vector<>();
         this.buildings = new Vector<>();
@@ -20,7 +22,8 @@ public class Farm {
         this.beehives = new HashMap<String, Beehive>();
     }
 
-    public Farm(String name, Vector<Field> fields, Vector<Builidng> buildings, List<Animal> animals, Map<String, Beehive> beehives) {
+    public Farm(int id, String name, Vector<Field> fields, Vector<Builidng> buildings, List<Animal> animals, Map<String, Beehive> beehives) {
+        this.id = id;
         this.name = name;
         this.fields = fields;
         this.buildings = buildings;

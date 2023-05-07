@@ -25,14 +25,10 @@ public class Beehive {
     }
 
 
-    public Beehive(String identifier, int nrSupers, boolean queenExcluder, String lastExtractionDate, double lastExtractionQuantity) throws ParseException {
+    public Beehive(String identifier, int nrSupers, boolean queenExcluder, Date lastExtractionDate, double lastExtractionQuantity) throws ParseException {
         this.identifier = identifier;
         this.nrSupers = nrSupers;
         this.queenExcluder = queenExcluder;
-        // We need this to convert the string to a date
-        DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
-        this.lastExtractionDate = df.parse(lastExtractionDate);
-        this.lastExtractionQuantity = lastExtractionQuantity;
     }
 
     public String getIdentifier() {

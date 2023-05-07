@@ -40,7 +40,12 @@ public final class Cow extends Animal {
     public void setSize(Size size) {
         this.size = size;
     }
-
+    public void setSubspecies(String subspecies) {
+        this.subspecies = subspecies;
+    }
+    public void setLetterIdentifier(String letterIdentifier) {
+        this.letterIdentifier = letterIdentifier;
+    }
     public String getSubspecies() {
         return subspecies;
     }

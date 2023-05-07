@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="686d5811-ed58-4ab6-99a0-7b341ade37b1" name="Changes" comment="interfece, add animal, find animal, computeFoodNeeded">
+    <list default="true" id="686d5811-ed58-4ab6-99a0-7b341ade37b1" name="Changes" comment="new menu option">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/CreateTables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/Repos/BeehiveRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/Repos/ChickenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/Repos/CowRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/Repos/GenericRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Persistence/Repos/SheepRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/BeehiveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/ChickenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Services/SheepService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Beehive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Beehive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/CropField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/CropField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Farm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Farm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/GrazingField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/GrazingField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/AnimalInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/AnimalInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/CowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/CowService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/FarmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/FarmService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Service.java" afterDir="false" />
@@ -59,21 +76,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Laurentiu/Downloads/postgresql-42.6.0.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Laurentiu\IdeaProjects\Farm\src\main\java\lib" />
+      <recent name="C:\Users\Laurentiu\IdeaProjects\Farm\src\main\java\Persistence" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CreateTables" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Persistence.CreateTables" />
+      <module name="Farm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Model.Main" />
       <module name="Farm" />
@@ -90,6 +136,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CreateTables" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +155,12 @@
       <workItem from="1680007273752" duration="2604000" />
       <workItem from="1680017865703" duration="6101000" />
       <workItem from="1680089299190" duration="10943000" />
-      <workItem from="1680713580048" duration="8731000" />
+      <workItem from="1680713580048" duration="9846000" />
+      <workItem from="1680734149281" duration="615000" />
+      <workItem from="1680807965890" duration="1661000" />
+      <workItem from="1681132081514" duration="62000" />
+      <workItem from="1683462599441" duration="2745000" />
+      <workItem from="1683466475199" duration="28765000" />
     </task>
     <task id="LOCAL-00001" summary="-first commit">
       <created>1679610883333</created>
@@ -145,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680101053747</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new menu option">
+      <created>1680732856524</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680732856524</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +216,17 @@
     <MESSAGE value="animal new attr" />
     <MESSAGE value="added other classes" />
     <MESSAGE value="interfece, add animal, find animal, computeFoodNeeded" />
-    <option name="LAST_COMMIT_MESSAGE" value="interfece, add animal, find animal, computeFoodNeeded" />
+    <MESSAGE value="new menu option" />
+    <option name="LAST_COMMIT_MESSAGE" value="new menu option" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

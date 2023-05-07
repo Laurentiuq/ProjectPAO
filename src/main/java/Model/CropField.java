@@ -19,8 +19,8 @@ public class CropField extends Field{
     public CropField() {
     }
 
-    public CropField(String name, int size, int type, boolean irrigated, Crop cropType) {
-        super(name, size, type);
+    public CropField(int id, String name, int size, int type, boolean irrigated, Crop cropType) {
+        super(id, name, size, type);
         this.irrigated = irrigated;
         this.cropType = cropType;
     }
