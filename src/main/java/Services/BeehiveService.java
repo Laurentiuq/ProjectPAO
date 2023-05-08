@@ -23,10 +23,10 @@ public class BeehiveService {
         String lastExtractionDateString = scanner.nextLine();
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         Date lastExtractionDate = df.parse(lastExtractionDateString);
+        System.out.println(lastExtractionDate);
         System.out.println("Last extraction quantity: ");
         double lastExtractionQuantity = scanner.nextDouble();
         scanner.nextLine();
-
         return new Beehive(identifier, numberOfSupers, queenExcluder, lastExtractionDate, lastExtractionQuantity);
     }
 }

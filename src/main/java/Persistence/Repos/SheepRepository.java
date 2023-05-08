@@ -11,7 +11,7 @@ import java.util.*;
 
 public class SheepRepository implements GenericRepository<Sheep> {
     private final Map<String, Sheep> storage = new HashMap<>();
-    public static final String INSERT_STATEMENT = "INSERT INTO sheep (earTag, name, weight, age, healthStatus, woolBreed, letterIdentifier, uniqueNumberIdentifier, species) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public static final String INSERT_STATEMENT = "INSERT INTO sheep (earTag, name, weight, age, healthStatus, woolBreed, letterIdentifier, uniqueNumberIdentifier, species, lastshearing) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     public static final String SELECT_ALL_STATEMENT = "SELECT * FROM sheep";
     public static final String SELECT_BY_ID_STATEMENT = "SELECT * FROM sheep WHERE earTag = ?";
     public static final String DELETE_STATEMENT = "DELETE FROM sheep WHERE earTag = ?";
@@ -46,6 +46,7 @@ public class SheepRepository implements GenericRepository<Sheep> {
         preparedStatement.setString(7, sheep.getLetterIdentifier());
         preparedStatement.setInt(8, sheep.getUniqueNumberIdentifier());
         preparedStatement.setString(9, sheep.getSpecies());
+        preparedStatement.setDate(10, new java.sql.Date(sheep.getLastShearing().getTime()));
         preparedStatement.executeUpdate();
         return sheep;
     }

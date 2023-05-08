@@ -1,6 +1,7 @@
 package Services;
 
 import Model.*;
+import Persistence.Repos.BeehiveRepository;
 import Persistence.Repos.ChickenRepository;
 import Persistence.Repos.CowRepository;
 import Persistence.Repos.SheepRepository;
@@ -55,12 +56,13 @@ public class FarmService {
         farm.getBeehives().put(beehive.getIdentifier(), beehive);
     }
 
-    public void sortBeehives(){
+    public void sortBeehives() throws SQLException {
         System.out.println("------Beehives sorted by identifier--------");
         // transferam valorile din map in lista si sortam lista
-        List<Beehive> beehives = new java.util.ArrayList<>(farm.getBeehives().values().stream().toList());
+        BeehiveRepository beehiveRepository = BeehiveRepository.getInstance();
+//        List<Beehive> beehives = new java.util.ArrayList<>(farm.getBeehives().values().stream().toList());
+        List<Beehive> beehives = beehiveRepository.findAll();
         beehives.sort((b1, b2) -> b1.getIdentifier().compareTo(b2.getIdentifier()));
-
         for (Beehive beehive : beehives) {
             System.out.println(beehive);
         }

@@ -1,12 +1,10 @@
 package Model;
 
-import java.text.DateFormat;
 // df.parse() can throw a ParseException so we need to import this to parse the exception
 import java.text.ParseException;
 // We need this to convert the string to a date, as I choose to give the date as a string in the constructor
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.time.Instant;
+//import java.sql.Date;
 
 public class Beehive {
 
@@ -29,6 +27,8 @@ public class Beehive {
         this.identifier = identifier;
         this.nrSupers = nrSupers;
         this.queenExcluder = queenExcluder;
+        this.lastExtractionDate = lastExtractionDate;
+        this.lastExtractionQuantity = lastExtractionQuantity;
     }
 
     public String getIdentifier() {
@@ -56,6 +56,7 @@ public class Beehive {
     }
 
     public Date getLastExtractionDate() {
+        System.out.println(lastExtractionDate);
         return lastExtractionDate;
     }
 

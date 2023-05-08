@@ -1,22 +1,13 @@
 package Model;
 
 
-enum Crop{
-    WHEAT,
-    BARLEY,
-    OATS,
-    RYE,
-    CORN,
-    BEANS,
-    BEETS
-}
-
-
-public class CropField extends Field{
+public class CropField extends Field {
+    static int idStatic = 0;
     private boolean irrigated;
     private Crop cropType;
 
     public CropField() {
+
     }
 
     public CropField(int id, String name, int size, int type, boolean irrigated, Crop cropType) {
@@ -24,6 +15,14 @@ public class CropField extends Field{
         this.irrigated = irrigated;
         this.cropType = cropType;
     }
+    // pentru autoincrementarea id-ului
+    public CropField(String name, int size, int type, boolean irrigated, Crop cropType) {
+        super(idStatic++, name, size, type);
+        idStatic = idStatic + 1;
+        this.irrigated = irrigated;
+        this.cropType = cropType;
+    }
+
 
     public boolean isIrrigated() {
         return irrigated;
@@ -44,7 +43,8 @@ public class CropField extends Field{
     @Override
     public String toString() {
         return "CropField{" +
-                "irrigated=" + irrigated +
+                "id=" + id +
+                ", irrigated=" + irrigated +
                 ", cropType=" + cropType +
                 ", name='" + name + '\'' +
                 ", size=" + size +

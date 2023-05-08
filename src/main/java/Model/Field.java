@@ -17,6 +17,18 @@ abstract class Field {
         this.type = type;
     }
 
+    public Field(String name, int size, int type) {
+        this.name = name;
+        this.size = size;
+        this.type = type;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }

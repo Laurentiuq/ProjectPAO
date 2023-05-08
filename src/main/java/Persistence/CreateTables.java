@@ -7,7 +7,7 @@ public class CreateTables {
         )){
 
             String sizeType = "CREATE TYPE Size AS ENUM ('Small', 'Medium', 'Large');";
-
+            String cropType = "CREATE TYPE Crop AS ENUM ('Wheat', 'Barley', 'Oats', 'Rye', 'Corn', 'Beans', 'Beets');";
             String createCowTable = "CREATE TABLE COW("+
                     "earTag VARCHAR(50) PRIMARY KEY,"+
                     "name VARCHAR(255) ,"+
@@ -48,11 +48,33 @@ public class CreateTables {
                     "lastExtractionDate DATE," +
                     "lastExtractionQuantity DOUBLE PRECISION);";
 
+            String createSequence = "CREATE SEQUENCE SEQ START 1;";
+            String createSequence2 = "CREATE SEQUENCE SEQ2 START 1;";
+
+            String createGrazingFieldTable ="CREATE TABLE GRAZINGFIELD(" +
+                    "id INT PRIMARY KEY DEFAULT nextval('seq2')," +
+                    "name VARCHAR(255)," +
+                    "size INTEGER," +
+                    "type INTEGER," +
+                    "fertility DOUBLE PRECISION," +
+                    "lastGrazingDate DATE);";
+
+            String createCropFieldTable = "CREATE TABLE CROPFIELD(" +
+                    "id INT PRIMARY KEY DEFAULT nextval('seq')," +
+                    "name VARCHAR(255)," +
+                    "size INTEGER," +
+                    "type INTEGER," +
+                    "irrigated BOOLEAN," +
+                    "cropType crop);";
+
+
 
 
             try(Statement statement = connection.createStatement()){
                 statement.execute("DROP TYPE IF EXISTS size CASCADE;");
                 statement.execute(sizeType);
+                statement.execute("DROP TYPE IF EXISTS crop CASCADE;");
+                statement.execute(cropType);
                 statement.execute("DROP TABLE IF EXISTS COW CASCADE;");
                 statement.execute(createCowTable);
                 statement.execute("DROP TABLE IF EXISTS SHEEP CASCADE;");
@@ -61,6 +83,15 @@ public class CreateTables {
                 statement.execute(createChickenTable);
                 statement.execute("DROP TABLE IF EXISTS BEEHIVE CASCADE;");
                 statement.execute(createBeehiveTable);
+                statement.execute("DROP SEQUENCE IF EXISTS SEQ CASCADE;");
+                statement.execute(createSequence);
+                statement.execute("DROP SEQUENCE IF EXISTS SEQ2 CASCADE;");
+                statement.execute(createSequence2);
+                statement.execute("DROP TABLE IF EXISTS GRAZINGFIELD CASCADE;");
+                statement.execute(createGrazingFieldTable);
+                statement.execute("DROP TABLE IF EXISTS CROPFIELD CASCADE;");
+                statement.execute(createCropFieldTable);
+
                 System.out.println("Table created successfully");
             }
         } catch (SQLException e) {

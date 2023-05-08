@@ -1,14 +1,10 @@
 package Persistence.Repos;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.text.ParseException;
-import java.util.*;
-
 import Model.Beehive;
 import Persistence.DBConnection;
+import java.sql.Date;
+import java.sql.*;
+import java.text.ParseException;
+import java.util.*;
 public class BeehiveRepository implements GenericRepository<Beehive>{
     private final Map<String, Beehive> storage = new HashMap<>();
     private static final String INSERT_STATEMENT = "INSERT INTO beehive (id, nrSupers, queenExcluder, lastExtractionDate, lastExtractionQuantity) VALUES (?, ?, ?, ?, ?)";
@@ -39,7 +35,7 @@ public class BeehiveRepository implements GenericRepository<Beehive>{
         preparedStatement.setString(1, beehive.getIdentifier());
         preparedStatement.setInt(2, beehive.getNrSupers());
         preparedStatement.setBoolean(3, beehive.isQueenExcluder());
-        preparedStatement.setDate(4, (Date) beehive.getLastExtractionDate());
+        preparedStatement.setDate(4, new java.sql.Date(beehive.getLastExtractionDate().getTime()));
         preparedStatement.setDouble(5, beehive.getLastExtractionQuantity());
         preparedStatement.executeUpdate();
         return beehive;

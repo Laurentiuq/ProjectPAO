@@ -14,6 +14,11 @@ public class GrazingField extends Field{
         this.fertility = fertility;
         this.lastGrazingDate = lastGrazingDate;
     }
+    public GrazingField(String name, int size, int type, double fertility, Date lastGrazingDate) {
+        super(name, size, type);
+        this.fertility = fertility;
+        this.lastGrazingDate = lastGrazingDate;
+    }
 
     public double getFertility() {
         return fertility;
@@ -34,7 +39,8 @@ public class GrazingField extends Field{
     @Override
     public String toString() {
         return "GrazingField{" +
-                "fertility=" + fertility +
+                "id=" + id +
+                ", fertility=" + fertility +
                 ", lastGrazingDate=" + lastGrazingDate +
                 ", name='" + name + '\'' +
                 ", size=" + size +

@@ -1,4 +1,6 @@
 package Persistence.Repos;
+import Model.CropField;
+
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
