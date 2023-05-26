@@ -12,7 +12,7 @@ import Services.FarmService;
 import Services.Service;
 
 public class Main {
-    public static void main(String[] args) throws ParseException, SQLException {
+    public static void main(String[] args) throws Exception {
         DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         Cow c1 = new Cow("C1", "Bos taurus", 100, 10, "Healthy", Size.Small, "Belgian Blue", "G",  1023);
         // Sheep takes a Date as a final argument

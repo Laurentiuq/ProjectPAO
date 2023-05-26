@@ -3,13 +3,8 @@ package Services;
 import Model.Animal;
 
 public interface FarmInterface {
-    public void addField();//TODO
-    public void removeField();//TODO
     public void findAnimal(String identifier); //DONE
     public void addAnimal(Animal animal); //DONE
-    public void removeAnimal();//TODO
-    public void addBeehive();//TODO
-    public void removeBeehive();//TODO
 
     // harvest a crop from a field
     public void harvestCrop();//TODO

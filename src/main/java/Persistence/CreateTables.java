@@ -66,7 +66,10 @@ public class CreateTables {
                     "type INTEGER," +
                     "irrigated BOOLEAN," +
                     "cropType crop);";
-
+            String createAnimalGrazingFieldTalbe= "CREATE TABLE ANIMALGRAZINGFIELD(" +
+                    "animalId VARCHAR(50) REFERENCES COW(earTag) ON DELETE CASCADE," +
+                    "grazingFieldId INT REFERENCES GRAZINGFIELD(id) ON DELETE CASCADE," +
+                    "PRIMARY KEY (animalId, grazingFieldId));";
 
 
 
@@ -91,6 +94,8 @@ public class CreateTables {
                 statement.execute(createGrazingFieldTable);
                 statement.execute("DROP TABLE IF EXISTS CROPFIELD CASCADE;");
                 statement.execute(createCropFieldTable);
+                statement.execute("DROP TABLE IF EXISTS ANIMALGRAZINGFIELD CASCADE;");
+                statement.execute(createAnimalGrazingFieldTalbe);
 
                 System.out.println("Table created successfully");
             }

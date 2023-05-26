@@ -62,7 +62,7 @@ public class CowService implements AnimalInterface{
         System.out.println("Age: ");
         int age = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Health: ");
+        System.out.println("Health: (mentions)");
         String health = scanner.nextLine();
         System.out.println("Size: (Small, Medium, Large)");
         String size = scanner.nextLine();
