@@ -1,4 +1,4 @@
-# Free Farm Managemt
+# Free Farm Management
 ![Screenshot 2023-03-28 170038](https://user-images.githubusercontent.com/99676849/228576577-3b1c3550-6b97-44fd-a3eb-4f6ad8eb1367.png)
 \
 Actiuni/Interogari:\
